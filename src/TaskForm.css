@@ -1,0 +1,38 @@
+.task-form {
+    margin-bottom: 20px;
+  }
+  
+  .input{
+    display: block;
+    width: 1000px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .dt-fav-add{
+    gap: 10px;
+  }
+
+  .date-picker{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 200px;
+    background-color: white;
+    color: black;
+  }
+
+  .checkbox{
+    padding: 100px;
+  }
+  
+  .task-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  

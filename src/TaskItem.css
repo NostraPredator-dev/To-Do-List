@@ -1,0 +1,64 @@
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    width: 980px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    color: #fff; 
+  }
+   
+  .task-item-important {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    width: 980px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ff7d00;
+    color: #fff; 
+  }
+  
+  .edit-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .date-pickr{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 200px;
+    background-color: grey;
+    color: #fff;
+  }
+  
+  .check-save{
+    gap: 20px;
+  }
+  
+  h3 {
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-block: 5px;
+  }
+  
+  .fabs {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-right: 10px;
+  }
+  

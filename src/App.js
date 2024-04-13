@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import TaskList from "./TaskList";
+import TaskForm from "./TaskForm";
+import Navbar from "./Navbar";
+import filterTasks from "./taskfilters";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+  const [filter, setFilter] = useState("all");
+
+  const addTask = (newTask) => {
+    const updatedTasks = [...tasks, newTask];
+    updatedTasks.sort((a, b) => new Date(a.date) - new Date(b.date));
+    setTasks(updatedTasks);
+  };
+
+  const deleteTask = (taskId) => {
+    setTasks(tasks.filter((task, index) => index !== taskId));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app dark-mode">
+      <Navbar setFilter={setFilter} />
+      <div className="content">
+        {filter === "all" && <TaskForm addTask={addTask} />}
+        <TaskList
+          tasks={filterTasks(tasks, filter)}
+          onDelete={deleteTask}
+          time={filter}
+        />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
