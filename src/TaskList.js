@@ -34,8 +34,8 @@ export default function TaskList({ tasks, onDelete, time }) {
   }
   return (
     <div className="task-list">
-      {tasks.map((task, index) => (
-        <TaskItem key={index} id={index} task={task} onDelete={onDelete} />
+      {tasks.map((task) => (
+        <TaskItem key={task.id} task={task} onDelete={onDelete} />
       ))}
     </div>
   );

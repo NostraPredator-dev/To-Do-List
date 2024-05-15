@@ -6,6 +6,7 @@ import GradeOutlinedIcon from "@mui/icons-material/GradeOutlined";
 import GradeRoundedIcon from "@mui/icons-material/GradeRounded";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
+import { v4 as uuidv4 } from "uuid";
 import "./TaskForm.css";
 
 export default function TaskForm({ addTask }) {
@@ -17,6 +18,7 @@ export default function TaskForm({ addTask }) {
     e.preventDefault();
 
     const newTask = {
+      id: uuidv4(),
       title,
       pDate: startDate.toString().split(" "),
       date: startDate,

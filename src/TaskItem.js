@@ -10,7 +10,7 @@ import GradeOutlinedIcon from "@mui/icons-material/GradeOutlined";
 import GradeRoundedIcon from "@mui/icons-material/GradeRounded";
 import "./TaskItem.css";
 
-function TaskItem({ id, task, onDelete }) {
+function TaskItem({ task, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editedTitle, setEditedTitle] = useState(task.title);
   const [editedDate, setEditedDate] = useState(task.date);
@@ -37,7 +37,7 @@ function TaskItem({ id, task, onDelete }) {
   };
 
   const handleDelete = () => {
-    onDelete(id);
+    onDelete(task);
   };
 
   return (

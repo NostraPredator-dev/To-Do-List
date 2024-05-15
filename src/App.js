@@ -25,9 +25,9 @@ const App = () => {
     });
   };
 
-  const deleteTask = (taskId) => {
+  const deleteTask = (remTask) => {
     setTasks(() => {
-      const updatedTasks = tasks.filter((task, index) => index !== taskId);
+      const updatedTasks = tasks.filter((task) => remTask.id !== task.id);
       localStorage.setItem("tasks", JSON.stringify(updatedTasks));
       return updatedTasks;
     });

@@ -11,11 +11,11 @@ const filterTasks = (tasks, filter) => {
         );
       });
     case "next7days":
+      const today = new Date();
+      const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
       return tasks.filter((task) => {
         const taskDeadline = new Date(task.date);
-        const today = new Date();
-        const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
-        return taskDeadline > today && taskDeadline <= nextWeek;
+        return taskDeadline.getDate >= today.getDate && taskDeadline < nextWeek;
       });
     case "important":
       return tasks.filter((task) => task.isImp);
